@@ -341,7 +341,8 @@ export default function Home() {
                     <div className="contact-item-content">
                       <strong>Adres:</strong>
                       <p>
-                        Ostim Organize Sanayi Bölgesi
+                        GÜNEŞ 90 SANAYİ SİTESİ, İvedik OSB, 1403. Sk. NO:22,
+                        06374 Yenimahalle
                         <br />
                         Ankara / TÜRKİYE
                       </p>
@@ -355,9 +356,9 @@ export default function Home() {
                     <div className="contact-item-content">
                       <strong>Telefon:</strong>
                       <p>
-                        +90 312 XXX XX XX
+                        +90 312 395 19 32
                         <br />
-                        +90 5XX XXX XX XX
+                        +90 532 372 95 11
                       </p>
                     </div>
                   </div>
@@ -368,7 +369,7 @@ export default function Home() {
                     </div>
                     <div className="contact-item-content">
                       <strong>E-posta:</strong>
-                      <p>info@mekcenasansor.com</p>
+                      <p>mekcenasansor@hotmail.com</p>
                     </div>
                   </div>
 
@@ -396,9 +397,9 @@ export default function Home() {
                   <p>
                     <strong>Hızlı İletişim İçin:</strong>
                   </p>
-                  <p>📞 Hemen arayın: +90 312 XXX XX XX</p>
-                  <p>📱 WhatsApp: +90 5XX XXX XX XX</p>
-                  <p>✉️ E-posta: info@mekcenasansor.com</p>
+                  <p>📞 Hemen arayın: +90 312 395 19 32</p>
+                  <p>📱 WhatsApp: +90 532 372 95 11</p>
+                  <p>✉️ E-posta: mekcenasansor@hotmail.com</p>
                 </div>
 
                 <div className="cta-box">
@@ -428,13 +429,14 @@ export default function Home() {
             </div>
 
             <div className="map-container">
-              <div className="map-placeholder">
-                <MapPin size={48} />
-                <p>Google Maps Buraya Eklenecek</p>
-                <p style={{ fontSize: "14px", marginTop: "10px" }}>
-                  Ostim, Ankara
-                </p>
-              </div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d764.2168285982207!2d32.74748886965946!3d39.98907042572986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d349e5470fd993%3A0x9d169585bbece615!2sMekcen%20Asans%C3%B6r!5e0!3m2!1str!2str!4v1755178189712!5m2!1str!2str"
+                width="100%"
+                height="400"
+                style={{ border: 0, borderRadius: "8px" }}
+                allowFullScreen=""
+                loading="lazy"
+              ></iframe>
             </div>
           </div>
         </section>
@@ -483,16 +485,17 @@ export default function Home() {
               <p>
                 Ostim OSB, Ankara
                 <br />
-                Tel: +90 312 XXX XX XX
+                Tel: +90 312 395 19 32
                 <br />
-                info@mekcenasansor.com
+                GÜNEŞ 90 SANAYİ SİTESİ, İvedik OSB, 1403. Sk. NO:22, 06374
+                Yenimahalle
               </p>
             </div>
           </div>
 
           <div className="footer-bottom">
             <p>
-              © 2024 MEKCEN Elektronik Asansör Kontrol Sistemleri. Tüm hakları
+              © 2025 MEKCEN Elektronik Asansör Kontrol Sistemleri. Tüm hakları
               saklıdır.
             </p>
           </div>
