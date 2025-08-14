@@ -408,7 +408,12 @@ export default function Home() {
                     Projeniz için özel fiyat teklifi almak veya ürünlerimiz
                     hakkında detaylı bilgi için bizimle iletişime geçin.
                   </p>
-                  <button className="btn btn-green btn-full">
+                  <button
+                    className="btn btn-green btn-full"
+                    onClick={() => {
+                      window.open("https://wa.me/905323729511", "_blank");
+                    }}
+                  >
                     <Phone size={20} />
                     Hemen Arayın
                   </button>
@@ -420,7 +425,12 @@ export default function Home() {
                     Ürünlerimizi yerinde görmek ve detaylı bilgi almak için
                     showroom&apos;umuzu ziyaret edebilirsiniz.
                   </p>
-                  <button className="btn btn-blue btn-full">
+                  <button
+                    className="btn btn-blue btn-full"
+                    onClick={() => {
+                      window.open("https://maps.app.goo.gl/YDekciMW95T8t9kA6");
+                    }}
+                  >
                     <MapPin size={20} />
                     Yol Tarifi Al
                   </button>
