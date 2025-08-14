@@ -135,7 +135,7 @@ export default function Home() {
           <section className="hero">
             <div className="container">
               <div className="hero-content">
-                <h2>1997'den Beri Güvenilir Çözüm Ortağınız</h2>
+                <h2>1997&apos;den Beri Güvenilir Çözüm Ortağınız</h2>
                 <p>
                   Asansör kontrol sistemlerinde 25 yılı aşkın tecrübe ile
                   modern, güvenli ve ekonomik çözümler sunuyoruz.
@@ -168,7 +168,7 @@ export default function Home() {
                   </div>
                   <h4>25 Yıllık Tecrübe</h4>
                   <p>
-                    1997'den beri sektörde edindiğimiz deneyimle güvenilir
+                    1997&apos;den beri sektörde edindiğimiz deneyimle güvenilir
                     çözümler sunuyoruz.
                   </p>
                 </div>
@@ -258,8 +258,8 @@ export default function Home() {
               <h3>Firmamız</h3>
               <p>
                 <strong>MEKCEN Elektronik Asansör Kontrol Sistemleri</strong>,
-                1997 yılından bu yana Ankara Ostim'de faaliyet gösteren, asansör
-                sektöründe öncü firmalardan biridir. Kurucumuz{" "}
+                1997 yılından bu yana Ankara Ostim&apos;de faaliyet gösteren,
+                asansör sektöründe öncü firmalardan biridir. Kurucumuz{" "}
                 <strong>Mehmet Kıvrak</strong> önderliğinde, 25 yılı aşkın
                 tecrübemizle sektöre yenilikçi ve güvenilir çözümler
                 sunmaktayız.
@@ -283,9 +283,9 @@ export default function Home() {
               <div className="mission-card">
                 <h4>Vizyonumuz</h4>
                 <p>
-                  Türkiye'nin lider asansör kontrol sistemleri üreticisi olarak,
-                  uluslararası standartlarda ürünler geliştirmek ve ihracat
-                  yapan bir firma haline gelmek.
+                  Türkiye&apos;nin lider asansör kontrol sistemleri üreticisi
+                  olarak, uluslararası standartlarda ürünler geliştirmek ve
+                  ihracat yapan bir firma haline gelmek.
                 </p>
               </div>
             </div>
@@ -417,7 +417,7 @@ export default function Home() {
                   <h4>Ziyaret Edin</h4>
                   <p>
                     Ürünlerimizi yerinde görmek ve detaylı bilgi almak için
-                    showroom'umuzu ziyaret edebilirsiniz.
+                    showroom&apos;umuzu ziyaret edebilirsiniz.
                   </p>
                   <button className="btn btn-blue btn-full">
                     <MapPin size={20} />
@@ -447,7 +447,7 @@ export default function Home() {
             <div className="footer-column">
               <h4>MEKCEN</h4>
               <p>
-                1997'den beri asansör kontrol sistemlerinde güvenilir çözüm
+                1997&apos;den beri asansör kontrol sistemlerinde güvenilir çözüm
                 ortağınız.
               </p>
             </div>
