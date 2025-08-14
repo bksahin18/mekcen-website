@@ -11,6 +11,7 @@ import {
   Shield,
   Users,
 } from "lucide-react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState("anasayfa");
