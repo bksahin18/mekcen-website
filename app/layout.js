@@ -205,11 +205,11 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
 
-        {/* Google Analytics (G-XXXXXXXXXX yerine kendi kodunuzu yazın) */}
+        {/* Google Analytics */}
         {process.env.NODE_ENV === "production" && (
           <>
             <Script
-              src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+              src="https://www.googletagmanager.com/gtag/js?id=G-JXHLRL08XT"
               strategy="afterInteractive"
             />
             <Script id="google-analytics" strategy="afterInteractive">
@@ -217,7 +217,7 @@ export default function RootLayout({ children }) {
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
-                gtag('config', 'G-XXXXXXXXXX');
+                gtag('config', 'G-JXHLRL08XT');
               `}
             </Script>
           </>
