@@ -85,15 +85,8 @@ export const metadata = {
       },
     ],
   },
-  manifest: "/site.webmanifest",
   verification: {
-    google: (
-      <meta
-        name="google-site-verification"
-        content="xwEzzgK_DESTGkB_4f-Lwemcs8iqLhZMtr20fq-jAn8"
-      />
-    ), // Google Search Console'dan alacaksınız
-    yandex: "yandex-verification-kodunuz", // Opsiyonel
+    google: "xwEzzgK_DESTGkB_4f-Lwemcs8iqLhZMtr20fq-jAn8", // Google Search Console kodun
   },
   category: "business",
 };
