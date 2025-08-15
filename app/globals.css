@@ -220,7 +220,7 @@ body {
   backdrop-filter: blur(20px);
   z-index: 999;
   transition: left 0.3s ease;
-  padding-top: 100px;
+  padding-top: 9rem;
 }
 
 .mobile-menu-overlay.active {
