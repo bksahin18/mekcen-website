@@ -1,0 +1,11 @@
+# Robots.txt for MEKCEN
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Sitemaps
+Sitemap: https://mekcenelektronik.com/sitemap.xml
+
+# Crawl-delay
+User-agent: *
+Crawl-delay: 1
