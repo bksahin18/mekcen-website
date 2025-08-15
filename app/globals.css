@@ -709,7 +709,7 @@ body {
 .gradient-box {
   background: var(--gradient-1);
   color: white;
-  padding: 50px;
+  padding: 10px;
   border-radius: 20px;
   position: relative;
   overflow: hidden;
@@ -766,9 +766,9 @@ body {
 }
 
 .stat-number {
-  font-size: 42px;
+  font-size: 1.9rem;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 0.1rem;
 }
 
 .counter {
@@ -787,7 +787,7 @@ body {
 }
 
 .stat-label {
-  font-size: 14px;
+  font-size: 1rem;
   opacity: 0.9;
 }
 

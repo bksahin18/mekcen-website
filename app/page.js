@@ -111,11 +111,16 @@ export default function Home() {
       <div className="loading-screen">
         <div className="loading-content">
           <Image
-            src="/logo.png"
+            src="/android-chrome-512x512.png"
             alt="MEKCEN Logo"
             width={150}
             height={150}
             priority
+            style={{
+              animationDelay: "0.5s",
+              borderRadius: "10%",
+              padding: "0.1rem",
+            }}
           />
           <div className="loading-spinner"></div>
         </div>
@@ -131,19 +136,29 @@ export default function Home() {
       <header className="header">
         <div className="container">
           <div className="header-content">
-            <div className="logo-section">
+            <div
+              className="logo-section"
+              style={{ padding: "0px", margin: "0px" }}
+              onClick={() => setActiveTab("anasayfa")}
+            >
               <Image
-                src="/logo.png"
+                src="/logo-for-header.png"
                 alt="MEKCEN Logo"
-                width={50}
-                height={50}
+                width={1000}
+                height={1000}
+                style={{
+                  width: "auto",
+                  height: "7rem",
+                  padding: "0px",
+                  margin: "0px",
+                }}
                 className="logo-image"
                 priority
               />
-              <div className="company-name">
+              {/* <div className="company-name">
                 <h1>MEKCEN</h1>
                 <p>Elektronik Asansör Kontrol Sistemleri</p>
-              </div>
+              </div> */}
             </div>
 
             {/* Desktop Navigation */}
