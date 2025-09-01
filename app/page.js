@@ -13,6 +13,13 @@ import {
   ChevronUp,
   Menu,
   X,
+  FileText,
+  Download,
+  Eye,
+  Image as ImageIcon,
+  Cpu,
+  Award,
+  BookOpen,
 } from "lucide-react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Image from "next/image";
@@ -22,6 +29,8 @@ export default function Home() {
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [showProductModal, setShowProductModal] = useState(false);
 
   useEffect(() => {
     // Loading effect
@@ -55,32 +64,101 @@ export default function Home() {
     return phones[type];
   };
 
+  // MC-052 dokümantasyon listesi
+  const mc052Documents = [
+    {
+      name: "KUMANDA TABLOSU İÇİN BESLEME DEVRELERİ ÇİFT HIZLI ASANSÖR SİSTEMLERİ",
+      file: "BESL-ÇİFT HIZ.pdf",
+      type: "pdf",
+    },
+    {
+      name: "DIŞ KUMANDA BAĞLANTILARI KABİN TESİSATI PARALEL",
+      file: "DIŞ KUMANDA BAĞLANTILARI-PARALEL.pdf",
+      type: "pdf",
+    },
+    {
+      name: "EMNİYET DEVRELERİ GERİ ALMA KUMANDASI KABİN ÜSTÜ REVİZYON KUMANDASI",
+      file: "EMNİYET DEVRESİ BAĞLANTILARI.pdf",
+      type: "pdf",
+    },
+    {
+      name: "KABİN BAĞLANTILARI KABİN TESİSATI PARALEL",
+      file: "KABİN BAĞLANTILARI.pdf",
+      type: "pdf",
+    },
+    {
+      name: "KAT UÇLARI BAĞLANTISI",
+      file: "KAT UÇLARI BAĞLANTILARI.pdf",
+      type: "pdf",
+    },
+    {
+      name: "KUMANDA TABLOSU İÇİN MIKNATIS DİZİLİŞİ TAHRİK TİPİ : ÇİFT HIZLI SİSTEMLER",
+      file: "MIKNATIS DİZİLİMİ-ÇİFT HIZLI.pdf",
+      type: "pdf",
+    },
+    {
+      name: "KONTROL KARTI İLE TEK HIZLI MIKNATIS DİZİLİŞİ",
+      file: "MIKNATIS DİZİLİMİ-TEK HIZLI.pdf",
+      type: "pdf",
+    },
+    {
+      name: "ÇİFT HIZLI SİSTEMLER İÇİN MOTOR KONTAKTÖR, FREN BOBİNİ, LİRPOMP TERMİSTÖR VE FAN MOTORU BAĞLANTILARI",
+      file: "motor 2 hız.pdf",
+      type: "pdf",
+    },
+    {
+      name: "REVİZYON ALARM KARTI BAĞLANTILARI KABİN ÜSTÜ PRİZ VE FAN BAĞLANTILARI TELEFON VE İNTERCOM BAĞLANTILARI",
+      file: "REVİZYON KARTI BAĞLANTISI.pdf",
+      type: "pdf",
+    },
+    {
+      name: "KUMANDA SİSTEMLİ ASANSÖRLERDE KULLANILAN KODLAMALAR",
+      file: "MC-052 KLEMENS RUMUZLARI.doc",
+      type: "word",
+    },
+    {
+      name: "ANA PARAMETRELERİ VE AYARLANABİLEN DEĞERLER",
+      file: "MC-052 PARAMETRELERİ.doc",
+      type: "word",
+    },
+  ];
+
   const products = [
     {
-      name: "MK-2000 Serisi",
-      description: "Yüksek performanslı asansör kontrol kartı",
+      id: "mc-052",
+      name: "MC-052",
+      description: "Mikroişlemci Kontrollü Asansör Kumanda Kartı",
+      detailedDescription:
+        "MC-052, MEKCEN tarafından geliştirilen ilk mikroişlemci kontrollü asansör kumanda kartıdır. Yüksek performans, güvenilirlik ve kolay kurulum özellikleriyle öne çıkar.",
       features: [
-        "10 kata kadar destek",
-        "Acil durum sistemi",
-        "LCD ekran desteği",
+        "16 kata kadar destek",
+        "Mikroişlemci kontrollü",
+        "Acil durum kurtarma sistemi",
+        "LCD gösterge desteği",
+        "Otomatik kapı kontrolü",
+        "Seri haberleşme (RS-485)",
+        "Arıza tespit ve kayıt sistemi",
+        "CE sertifikalı",
       ],
+      technicalSpecs: {
+        İşlemci: "32-bit ARM Cortex",
+        "Kat Kapasitesi": "16 kat",
+        "Besleme Gerilimi": "220V AC / 24V DC",
+        "Çalışma Sıcaklığı": "-10°C ~ +50°C",
+        Haberleşme: "RS-485, CAN-BUS",
+        Boyutlar: "250mm x 180mm x 45mm",
+        Ağırlık: "850g",
+      },
+      images: [
+        { src: "/products/mc-052/images/anakart.jpg", alt: "MC-052 Ana Kart" },
+        {
+          src: "/products/mc-052/images/seri-ext.jpg",
+          alt: "MC-052 Seri EXT Modül",
+        },
+      ],
+      documents: mc052Documents,
       color: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-    },
-    {
-      name: "MK-3000 Serisi",
-      description: "Profesyonel asansör kontrol sistemi",
-      features: [
-        "20 kata kadar destek",
-        "Uzaktan kontrol",
-        "Arıza tespit sistemi",
-      ],
-      color: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
-    },
-    {
-      name: "MK-ECO Serisi",
-      description: "Enerji tasarruflu kontrol kartı",
-      features: ["Enerji verimliliği", "Sessiz çalışma", "Kompakt tasarım"],
-      color: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+      hasDetails: true,
     },
   ];
 
@@ -104,6 +182,13 @@ export default function Home() {
       color: "#4facfe",
     },
   ];
+
+  const handleProductClick = (product) => {
+    if (product.hasDetails) {
+      setSelectedProduct(product);
+      setShowProductModal(true);
+    }
+  };
 
   // Loading screen
   if (loading) {
@@ -132,6 +217,137 @@ export default function Home() {
     <div className="app-container">
       <SpeedInsights />
 
+      {/* Product Detail Modal */}
+      {showProductModal && selectedProduct && (
+        <div
+          className="product-modal-overlay"
+          onClick={() => setShowProductModal(false)}
+        >
+          <div className="product-modal" onClick={(e) => e.stopPropagation()}>
+            <button
+              className="modal-close"
+              onClick={() => setShowProductModal(false)}
+            >
+              <X size={24} />
+            </button>
+
+            <div className="modal-header">
+              <h2>{selectedProduct.name} - Detaylı Bilgi</h2>
+            </div>
+
+            <div className="modal-content">
+              {/* Ürün Görselleri */}
+              {selectedProduct.images && (
+                <div className="product-images">
+                  <h3>
+                    <ImageIcon size={20} /> Ürün Görselleri
+                  </h3>
+                  <div className="image-gallery">
+                    {selectedProduct.images.map((img, idx) => (
+                      <div key={idx} className="gallery-item">
+                        <img src={img.src} alt={img.alt} />
+                        <p>{img.alt}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Açıklama */}
+              <div className="product-section">
+                <h3>
+                  <Cpu size={20} /> Ürün Açıklaması
+                </h3>
+                <p>{selectedProduct.detailedDescription}</p>
+              </div>
+
+              {/* Özellikler */}
+              <div className="product-section">
+                <h3>
+                  <Award size={20} /> Özellikler
+                </h3>
+                <ul className="feature-list-detailed">
+                  {selectedProduct.features.map((feature, idx) => (
+                    <li key={idx}>
+                      <CheckCircle size={16} />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Teknik Özellikler */}
+              {selectedProduct.technicalSpecs && (
+                <div className="product-section">
+                  <h3>
+                    <FileText size={20} /> Teknik Özellikler
+                  </h3>
+                  <table className="specs-table">
+                    <tbody>
+                      {Object.entries(selectedProduct.technicalSpecs).map(
+                        ([key, value]) => (
+                          <tr key={key}>
+                            <td className="spec-label">{key}</td>
+                            <td className="spec-value">{value}</td>
+                          </tr>
+                        )
+                      )}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+
+              {/* Dokümantasyon */}
+              {selectedProduct.documents && (
+                <div className="product-section">
+                  <h3>
+                    <BookOpen size={20} /> Dokümantasyon
+                  </h3>
+                  <div className="document-grid">
+                    {selectedProduct.documents.map((doc, idx) => (
+                      <a
+                        key={idx}
+                        href={`/products/${selectedProduct.id}/docs/${doc.file}`}
+                        download
+                        className="document-item"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <div className="doc-icon">
+                          {doc.type === "pdf" ? (
+                            <FileText size={24} />
+                          ) : (
+                            <FileText size={24} />
+                          )}
+                        </div>
+                        <span className="doc-name">{doc.name}</span>
+                        <Download size={16} className="download-icon" />
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* İletişim Butonu */}
+              <div className="modal-footer">
+                <button
+                  className="btn btn-gradient btn-full"
+                  onClick={() => {
+                    window.open(
+                      "https://wa.me/905323729511?text=Merhaba,%20MC-052%20ürününüz%20hakkında%20bilgi%20almak%20istiyorum",
+                      "_blank"
+                    );
+                  }}
+                >
+                  <Phone size={20} />
+                  <span>Ürün Hakkında Bilgi Al</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Header */}
       <header className="header">
         <div className="container">
@@ -155,10 +371,6 @@ export default function Home() {
                 className="logo-image"
                 priority
               />
-              {/* <div className="company-name">
-                <h1>MEKCEN</h1>
-                <p>Elektronik Asansör Kontrol Sistemleri</p>
-              </div> */}
             </div>
 
             {/* Desktop Navigation */}
@@ -322,28 +534,55 @@ export default function Home() {
             </h2>
             <div className="products-grid">
               {products.map((product, index) => (
-                <div key={index} className="product-card modern-card">
+                <div
+                  key={index}
+                  className={`product-card modern-card ${
+                    product.hasDetails ? "has-details" : ""
+                  }`}
+                  onClick={() => handleProductClick(product)}
+                  style={{ cursor: product.hasDetails ? "pointer" : "default" }}
+                >
+                  {product.badge && (
+                    <div className="product-badge-corner">{product.badge}</div>
+                  )}
                   <div
                     className="product-header"
                     style={{ background: product.color }}
                   >
                     <div className="product-logo">
-                      <div className="product-logo-circle glass-effect">MK</div>
+                      <div className="product-logo-circle glass-effect">
+                        {product.id === "mc-052" ? "MC" : "MK"}
+                      </div>
                       <p>{product.name}</p>
                     </div>
                   </div>
                   <div className="product-content">
                     <p>{product.description}</p>
                     <ul className="feature-list">
-                      {product.features.map((feature, idx) => (
+                      {product.features.slice(0, 3).map((feature, idx) => (
                         <li key={idx}>
                           <span className="check-icon">✓</span>
                           {feature}
                         </li>
                       ))}
+                      {product.features.length > 3 && (
+                        <li style={{ fontStyle: "italic", color: "#667eea" }}>
+                          <span className="check-icon">+</span>
+                          {product.features.length - 3} özellik daha...
+                        </li>
+                      )}
                     </ul>
                     <button className="btn btn-gradient btn-full">
-                      Detaylı Bilgi
+                      {product.hasDetails ? (
+                        <>
+                          <Eye size={16} />
+                          <span style={{ marginLeft: "8px" }}>
+                            Detaylı Bilgi & Dokümanlar
+                          </span>
+                        </>
+                      ) : (
+                        "Detaylı Bilgi"
+                      )}
                     </button>
                   </div>
                 </div>
