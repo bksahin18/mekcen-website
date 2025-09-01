@@ -150,9 +150,9 @@ export default function Home() {
         Ağırlık: "850g",
       },
       images: [
-        { src: "/products/mc-052/images/anakart.jpg", alt: "MC-052 Ana Kart" },
+        { src: "/products/mc-052/images/anakart.JPG", alt: "MC-052 Ana Kart" },
         {
-          src: "/products/mc-052/images/seri-ext.jpg",
+          src: "/products/mc-052/images/seri-ext.JPG",
           alt: "MC-052 Seri EXT Modül",
         },
       ],
