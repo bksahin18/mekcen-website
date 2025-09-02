@@ -122,7 +122,179 @@ export default function Home() {
       type: "word",
     },
   ];
-
+  const mc054Documents = [
+    // PDF dosyaları - gerçek dosya adlarını buraya yazın
+    {
+      name: "MAKİNE DAİRESİ BAĞLANTILARI – KUYU LAMBASI BAĞLANTILARI – PIN-KD KARTI KUYU DİBİ BAĞLANTILARI",
+      file: "1.pdf",
+      type: "pdf",
+    },
+    {
+      name: "BESLEME DEVRELERİ – UPS BAĞLANTISI – MEKANİK FREN BAĞLANTISI",
+      file: "2.pdf",
+      type: "pdf",
+    },
+    {
+      name: "BESLEME DEVRELERİ – UPS BAĞLANTISI – MEKANİK FREN BAĞLANTISI",
+      file: "3.pdf",
+      type: "pdf",
+    },
+    {
+      name: "DELTA VFD-VLİN VERTER BAĞLANTISI – GÜÇ DEVRESİ BAĞLANTISI",
+      file: "4.pdf",
+      type: "pdf",
+    },
+    {
+      name: "KART BAĞLANTILARI - GENEL",
+      file: "5.pdf",
+      type: "pdf",
+    },
+    {
+      name: "EMNİYET DEVRESİ KUYU DİBİ – KUYU DİBİ REVİZYON BAĞLANTILARI – KUYU DİBİ ALARM BUTONU VE DIŞ RESET BUTON BAĞLANTILARI",
+      file: "6.pdf",
+      type: "pdf",
+    },
+    {
+      name: "KABİN ÜSTÜ EMNİYET DEVRESİ – REVİZYON VE ALARM BUTON BAĞLANTILARI",
+      file: "7.pdf",
+      type: "pdf",
+    },
+    {
+      name: "EMNİYET DEVRESİ PANO – GERİ ALMA REVİZYON – BYPASS DEVRESİ",
+      file: "8.pdf",
+      type: "pdf",
+    },
+    {
+      name: "TÜM EMNİYET DEVRELERİ",
+      file: "9.pdf",
+      type: "pdf",
+    },
+    {
+      name: "A3 REGÜLATÖR BOBİN BAĞLANTISI – A3 REGÜLATÖR İZLEME BAĞLANTISI – BYPASS MODU VE KAT LAMBASI BAĞLANTISI",
+      file: "10.pdf",
+      type: "pdf",
+    },
+    {
+      name: "ŞEBEKE GİRİŞ VE KUYU AYDINLATMA DEVRESİ",
+      file: "HD-S1.pdf",
+      type: "pdf",
+    },
+    {
+      name: "BESLEME DEVRESİ UPS VE TRAFO",
+      file: "HD-S2.pdf",
+      type: "pdf",
+    },
+    {
+      name: "MOTOR VE KONTAKTÖR BAĞLANTILARI – TAHRİK TİPİ : HİDROLİK",
+      file: "HD-S3.pdf",
+      type: "pdf",
+    },
+    {
+      name: "EMNİYET DEVRELERİ – GERİ ALMA KUMANDASI – KABİN ÜSTÜ REVİZYON BAĞLANTILARI",
+      file: "HD-S4.pdf",
+      type: "pdf",
+    },
+    {
+      name: "KUMANDA KARTI BAĞLANTILARI – HİDROLİK ASANSÖR UYGULAMALARI İÇİN",
+      file: "HD-S5.pdf",
+      type: "pdf",
+    },
+    {
+      name: "KABİN BAĞLANTILARI – KABİN TESİSAT PARALEL",
+      file: "HD-S6.pdf",
+      type: "pdf",
+    },
+    {
+      name: "DIŞ BUTON SİNYAL LAMBA VE KAT KAYIT BUTONLARI – DIŞ KUMANDA YÖN OK SİNYAL LAMBALARI – DEPREM VE YANGIN ALARM SİNYAL GİRİŞLERİ",
+      file: "HD-S7.pdf",
+      type: "pdf",
+    },
+    {
+      name: "VALF BAĞLANTILARI – VALF BLOK: KLEAMAN 48VDC",
+      file: "HD-S8.pdf",
+      type: "pdf",
+    },
+    {
+      name: "MC-054 UYUMLULUK SERTİFİKASI",
+      file: "MC_054 CE BELGESİ.pdf",
+      type: "pdf",
+    },
+    {
+      name: "VALF BAĞLANTILARI – VALF BLOK: DMAR 48VDC",
+      file: "mc_054 omar_hid.pdf",
+      type: "pdf",
+    },
+    {
+      name: "KUMANDA TABLOSU KOLAY DEVREYE ALMA",
+      file: "MC_54 ucm test.docx",
+      type: "word",
+    },
+    {
+      name: "KONTROL KARTI İLE UCM TEST YAPILMASI",
+      file: "MC_054KOLAY DEVREYE ALMA.docx",
+      type: "word",
+    },
+    {
+      name: "KUMANDA SİSTEMLİ ASANSÖRLERDE KULLANILAN KODLAMALAR",
+      file: "MC-054 KLEMENS RUMUZLARI.doc",
+      type: "word",
+    },
+    {
+      name: "MIKNATIS KOPYALAMA",
+      file: "MIKNATIS_ML.pdf",
+      type: "pdf",
+    },
+    {
+      name: "MIKNATIS DİZİLİMİ ŞEMASI ML1 - ML2 – TAHRİK TİPİ : VVVF VE HİDROLİK",
+      file: "mıknatıs_kopyalama.pdf",
+      type: "pdf",
+    },
+    {
+      name: "MIKNATIS DİZİLİM ŞEMASI – TAHRİK TİPİ : VVVF VE HİDROLİK",
+      file: "mıknatıs_ML.pdf",
+      type: "pdf",
+    },
+    {
+      name: "ŞEBEKE GİRİŞ VE KUYU AYDINLATMA DEVRESİ",
+      file: "s-01.pdf",
+      type: "pdf",
+    },
+    {
+      name: "BESLEME DEVRESİ UPS VE TRAFO",
+      file: "s-02.pdf",
+      type: "pdf",
+    },
+    {
+      name: "MOTOR VE KONTAKTÖR BAĞLANTILARI – TAHRİK TİPİ : VVVF ASENKRON MOTORLAR – MOTOR SÜRÜCÜ : OPTIDRIVE INVERTEK",
+      file: "s-03.pdf",
+      type: "pdf",
+    },
+    {
+      name: "EMNİYET DEVRELERİ – GERİ ALMA KUMANDASI – KABİN ÜSTÜ REVİZYON BAĞLANTILARI",
+      file: "s-04.pdf",
+      type: "pdf",
+    },
+    {
+      name: "KUMANDA KARTI BAĞLANTILARI – VVVF ASANSÖR UYGULAMALARI İÇİN",
+      file: "s-05.pdf",
+      type: "pdf",
+    },
+    {
+      name: "KABİN BAĞLANTILARI – KABİN TESİSAT PARALEL",
+      file: "s-06.pdf",
+      type: "pdf",
+    },
+    {
+      name: "DIŞ BUTON SİNYAL LAMBA VE KAT KAYIT BUTONLARI – DIŞ KUMANDA YÖN OK SİNYAL LAMBALARI – DEPREM VE YANGIN ALARM SİNYAL GİRİŞLERİ",
+      file: "s-07.pdf",
+      type: "pdf",
+    },
+    {
+      name: "SERİ KART KABİN ÜSTÜ BAĞLANTILARI",
+      file: "seri_054.pdf",
+      type: "pdf",
+    },
+  ];
   const products = [
     {
       id: "mc-052",
@@ -158,6 +330,48 @@ export default function Home() {
       ],
       documents: mc052Documents,
       color: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+      hasDetails: true,
+    },
+    {
+      id: "mc-054",
+      name: "MC-054",
+      description: "Gelişmiş Mikroişlemci Kontrollü Asansör Kumanda Kartı",
+      detailedDescription:
+        "MC-054, MC-052'nin geliştirilmiş versiyonu olup, daha yüksek performans ve genişletilmiş özellikler sunar. IoT entegrasyonu ve uzaktan erişim özellikleriyle modern asansör sistemleri için ideal çözümdür.",
+      features: [
+        "24 kata kadar destek",
+        "IoT ve bulut entegrasyonu",
+        "Uzaktan izleme ve kontrol",
+        "Gelişmiş arıza tespit sistemi",
+        "Enerji tasarruf modu",
+        "Çift güvenlik sistemi",
+        "Mobil uygulama desteği",
+        "Sesli anons sistemi",
+        "RFID kart okuyucu desteği",
+        "Deprem sensörü entegrasyonu",
+        "Yangın alarm entegrasyonu",
+        "Otomatik bakım hatırlatması",
+      ],
+      technicalSpecs: {
+        İşlemci: "64-bit ARM Cortex-A53",
+        "Kat Kapasitesi": "24 kat",
+        "Besleme Gerilimi": "220V AC / 24V DC",
+        "Çalışma Sıcaklığı": "-20°C ~ +60°C",
+        Haberleşme: "RS-485, CAN-BUS, Ethernet, WiFi",
+        Bellek: "4GB RAM, 32GB Storage",
+        Boyutlar: "300mm x 200mm x 50mm",
+        Ağırlık: "1200g",
+        "Koruma Sınıfı": "IP54",
+      },
+      images: [
+        { src: "/products/mc-054/images/gorsel1.jpg", alt: "MC-054 Ana Kart" },
+        {
+          src: "/products/mc-054/images/gorsel2.jpg",
+          alt: "MC-054 Kontrol Paneli",
+        },
+      ],
+      documents: mc054Documents,
+      color: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
       hasDetails: true,
     },
   ];
@@ -245,7 +459,13 @@ export default function Home() {
                   <div className="image-gallery">
                     {selectedProduct.images.map((img, idx) => (
                       <div key={idx} className="gallery-item">
-                        <img src={img.src} alt={img.alt} />
+                        <Image
+                          src={img.src}
+                          alt={img.alt}
+                          width={500} // genişlik
+                          height={300} // yükseklik
+                          style={{ objectFit: "cover" }}
+                        />
                         <p>{img.alt}</p>
                       </div>
                     ))}
@@ -542,9 +762,6 @@ export default function Home() {
                   onClick={() => handleProductClick(product)}
                   style={{ cursor: product.hasDetails ? "pointer" : "default" }}
                 >
-                  {product.badge && (
-                    <div className="product-badge-corner">{product.badge}</div>
-                  )}
                   <div
                     className="product-header"
                     style={{ background: product.color }}
