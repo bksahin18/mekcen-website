@@ -364,9 +364,9 @@ export default function Home() {
         "Koruma Sınıfı": "IP54",
       },
       images: [
-        { src: "/products/mc-054/images/gorsel1.jpg", alt: "MC-054 Ana Kart" },
+        { src: "/products/mc-054/images/gorsel1.JPG", alt: "MC-054 Ana Kart" },
         {
-          src: "/products/mc-054/images/gorsel2.jpg",
+          src: "/products/mc-054/images/gorsel2.JPG",
           alt: "MC-054 Kontrol Paneli",
         },
       ],
