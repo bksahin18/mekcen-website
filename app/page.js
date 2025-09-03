@@ -188,6 +188,126 @@ export default function Home() {
           file: "10.pdf",
           type: "pdf",
         },
+        {
+          name: "ŞEBEKE GİRİŞ VE KUYU AYDINLATMA DEVRESİ",
+          file: "HD-S1.pdf",
+          type: "pdf",
+        },
+        {
+          name: "BESLEME DEVRESİ UPS VE TRAFO",
+          file: "HD-S2.pdf",
+          type: "pdf",
+        },
+        {
+          name: "MOTOR VE KONTAKTÖR BAĞLANTILARI – TAHRİK TİPİ : HİDROLİK",
+          file: "HD-S3.pdf",
+          type: "pdf",
+        },
+        {
+          name: "EMNİYET DEVRELERİ – GERİ ALMA KUMANDASI – KABİN ÜSTÜ REVİZYON BAĞLANTILARI",
+          file: "HD-S4.pdf",
+          type: "pdf",
+        },
+        {
+          name: "KUMANDA KARTI BAĞLANTILARI – HİDROLİK ASANSÖR UYGULAMALARI İÇİN",
+          file: "HD-S5.pdf",
+          type: "pdf",
+        },
+        {
+          name: "KABİN BAĞLANTILARI – KABİN TESİSAT PARALEL",
+          file: "HD-S6.pdf",
+          type: "pdf",
+        },
+        {
+          name: "DIŞ BUTON SİNYAL LAMBA VE KAT KAYIT BUTONLARI – DIŞ KUMANDA YÖN OK SİNYAL LAMBALARI – DEPREM VE YANGIN ALARM SİNYAL GİRİŞLERİ",
+          file: "HD-S7.pdf",
+          type: "pdf",
+        },
+        {
+          name: "VALF BAĞLANTILARI – VALF BLOK: KLEAMAN 48VDC",
+          file: "HD-S8.pdf",
+          type: "pdf",
+        },
+        {
+          name: "MC-054 UYUMLULUK SERTİFİKASI",
+          file: "MC_054 CE BELGESİ.pdf",
+          type: "pdf",
+        },
+        {
+          name: "VALF BAĞLANTILARI – VALF BLOK: DMAR 48VDC",
+          file: "mc_054 omar_hid.pdf",
+          type: "pdf",
+        },
+        {
+          name: "KUMANDA TABLOSU KOLAY DEVREYE ALMA",
+          file: "MC_54 ucm test.docx",
+          type: "word",
+        },
+        {
+          name: "KONTROL KARTI İLE UCM TEST YAPILMASI",
+          file: "MC_054KOLAY DEVREYE ALMA.docx",
+          type: "word",
+        },
+        {
+          name: "KUMANDA SİSTEMLİ ASANSÖRLERDE KULLANILAN KODLAMALAR",
+          file: "MC-054 KLEMENS RUMUZLARI.doc",
+          type: "word",
+        },
+        {
+          name: "MIKNATIS KOPYALAMA",
+          file: "MIKNATIS_ML.pdf",
+          type: "pdf",
+        },
+        {
+          name: "MIKNATIS DİZİLİMİ ŞEMASI ML1 - ML2 – TAHRİK TİPİ : VVVF VE HİDROLİK",
+          file: "mıknatıs_kopyalama.pdf",
+          type: "pdf",
+        },
+        {
+          name: "MIKNATIS DİZİLİM ŞEMASI – TAHRİK TİPİ : VVVF VE HİDROLİK",
+          file: "mıknatıs_ML.pdf",
+          type: "pdf",
+        },
+        {
+          name: "ŞEBEKE GİRİŞ VE KUYU AYDINLATMA DEVRESİ",
+          file: "s-01.pdf",
+          type: "pdf",
+        },
+        {
+          name: "BESLEME DEVRESİ UPS VE TRAFO",
+          file: "s-02.pdf",
+          type: "pdf",
+        },
+        {
+          name: "MOTOR VE KONTAKTÖR BAĞLANTILARI – TAHRİK TİPİ : VVVF ASENKRON MOTORLAR – MOTOR SÜRÜCÜ : OPTIDRIVE INVERTEK",
+          file: "s-03.pdf",
+          type: "pdf",
+        },
+        {
+          name: "EMNİYET DEVRELERİ – GERİ ALMA KUMANDASI – KABİN ÜSTÜ REVİZYON BAĞLANTILARI",
+          file: "s-04.pdf",
+          type: "pdf",
+        },
+        {
+          name: "KUMANDA KARTI BAĞLANTILARI – VVVF ASANSÖR UYGULAMALARI İÇİN",
+          file: "s-05.pdf",
+          type: "pdf",
+        },
+        {
+          name: "KABİN BAĞLANTILARI – KABİN TESİSAT PARALEL",
+          file: "s-06.pdf",
+          type: "pdf",
+        },
+        {
+          name: "DIŞ BUTON SİNYAL LAMBA VE KAT KAYIT BUTONLARI – DIŞ KUMANDA YÖN OK SİNYAL LAMBALARI – DEPREM VE YANGIN ALARM SİNYAL GİRİŞLERİ",
+          file: "s-07.pdf",
+          type: "pdf",
+        },
+        {
+          name: "SERİ KART KABİN ÜSTÜ BAĞLANTILARI",
+          file: "seri_054.pdf",
+          type: "pdf",
+        },
       ],
     }),
     []
@@ -268,15 +388,49 @@ export default function Home() {
         images: [
           {
             src: "/products/mc-054/images/gorsel1.JPG",
-            alt: "MC-054 Ana Kart",
-          },
-          {
-            src: "/products/mc-054/images/gorsel2.JPG",
-            alt: "MC-054 Kontrol Paneli",
+            alt: "MC-054 Kumanda Kartı",
           },
         ],
         documents: documentLists.mc054,
         color: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
+        hasDetails: true,
+      },
+      {
+        id: "krc",
+        name: "KRC KONTROL KARTI",
+        description: "Asansör Hareket Kontaktörü Kontrol Sistemi",
+        detailedDescription:
+          "KRC Kontrol Kartı, asansör sistemlerinde hareket kontaktörlerinin durumunu izlemek ve kontrol etmek için tasarlanmış özel bir kontrol kartıdır. Motor kontaktörlerinin aktif veya pasif durumunu güvenilir bir şekilde tespit ederek asansörün güvenli çalışmasını sağlar.",
+        features: [
+          "Hareket kontaktörü durumu kontrolü",
+          "T1 ve T2 PTC köprüleme çıkışları",
+          "101 ve 101A kuru kontak çıkışları",
+          "Güvenilir durum algılaması",
+          "Kompakt tasarım",
+          "Kolay montaj ve bağlantı",
+          "Geniş gerilim aralığı desteği",
+          "Endüstriyel ortamlara uygun",
+          "24V DC beslenme",
+          "LED durum göstergeleri",
+        ],
+        technicalSpecs: {
+          "Besleme Gerilimi": "24V DC",
+          "Çalışma Sıcaklığı": "-10°C ~ +60°C",
+          "Kontak Kapasitesi": "5A / 250V AC",
+          "Çıkış Tipleri": "T1, T2 (PTC Bypass), 101, 101A (Kuru Kontak)",
+          Boyutlar: "85mm x 60mm x 25mm",
+          Ağırlık: "120g",
+          "Koruma Sınıfı": "IP40",
+          Bağlantı: "Vida terminali",
+        },
+        images: [
+          {
+            src: "/products/krc/images/krc-kart.JPG",
+            alt: "KRC Kontrol Kartı",
+          },
+        ],
+        documents: [], // No documents available
+        color: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
         hasDetails: true,
       },
     ],
@@ -426,39 +580,58 @@ export default function Home() {
                 </div>
               )}
 
-              {/* Dokümantasyon */}
-              {selectedProduct.documents && (
-                <div className="product-section">
-                  <h3>
-                    <BookOpen size={18} /> Dokümantasyon
-                  </h3>
-                  <div className="document-grid">
-                    {selectedProduct.documents.slice(0, 12).map((doc, idx) => (
-                      <a
-                        key={idx}
-                        href={`/products/${selectedProduct.id}/docs/${doc.file}`}
-                        download
-                        className="document-item"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <div className="doc-icon">
-                          <FileText size={20} />
-                        </div>
-                        <span className="doc-name">
-                          {doc.name.substring(0, 50)}...
-                        </span>
-                        <Download size={12} className="download-icon" />
-                      </a>
-                    ))}
+              {/* Dokümantasyon - Sadece dokümanı varsa göster */}
+              {selectedProduct.documents &&
+                selectedProduct.documents.length > 0 && (
+                  <div className="product-section">
+                    <h3>
+                      <BookOpen size={18} /> Dokümantasyon
+                    </h3>
+                    <div className="document-grid">
+                      {selectedProduct.documents
+                        .slice(0, 35)
+                        .map((doc, idx) => (
+                          <a
+                            key={idx}
+                            href={`/products/${selectedProduct.id}/docs/${doc.file}`}
+                            download
+                            className="document-item"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <div className="doc-icon">
+                              <FileText size={20} />
+                            </div>
+                            <span className="doc-name">
+                              {doc.name.substring(0, 50)}...
+                            </span>
+                            <Download size={12} className="download-icon" />
+                          </a>
+                        ))}
+                    </div>
+                    {selectedProduct.documents.length > 35 && (
+                      <p className="more-docs-text">
+                        Ve {selectedProduct.documents.length - 35} dosya daha...
+                      </p>
+                    )}
                   </div>
-                  {selectedProduct.documents.length > 12 && (
-                    <p className="more-docs-text">
-                      Ve {selectedProduct.documents.length - 12} dosya daha...
-                    </p>
-                  )}
-                </div>
-              )}
+                )}
+
+              {/* Dokümantasyon yoksa bilgilendirme */}
+              {selectedProduct.documents &&
+                selectedProduct.documents.length === 0 && (
+                  <div className="product-section">
+                    <h3>
+                      <BookOpen size={18} /> Dokümantasyon
+                    </h3>
+                    <div className="no-documents-info">
+                      <p>
+                        Bu ürün için şu anda dokümantasyon bulunmamaktadır.
+                        Detaylı bilgi için lütfen bizimle iletişime geçin.
+                      </p>
+                    </div>
+                  </div>
+                )}
 
               {/* İletişim Butonu */}
               <div className="modal-footer">
@@ -669,7 +842,11 @@ export default function Home() {
                   >
                     <div className="product-logo">
                       <div className="product-logo-circle">
-                        {product.id === "mc-052" ? "052" : "054"}
+                        {product.id === "mc-052"
+                          ? "052"
+                          : product.id === "mc-054"
+                          ? "054"
+                          : "KRC"}
                       </div>
                       <h3>{product.name}</h3>
                     </div>
@@ -693,7 +870,7 @@ export default function Home() {
                       {product.hasDetails ? (
                         <>
                           <Eye size={16} />
-                          <span>Detaylı Bilgi & Dokümanlar</span>
+                          <span>Detaylı Bilgi & Teknik Özellikler</span>
                         </>
                       ) : (
                         "Detaylı Bilgi"

@@ -876,6 +876,21 @@ body {
   margin-top: 15px;
 }
 
+.no-documents-info {
+  background: #f8f9fa;
+  border: 2px dashed #e0e0e0;
+  border-radius: var(--border-radius);
+  padding: 30px;
+  text-align: center;
+}
+
+.no-documents-info p {
+  color: var(--text-light);
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+
 .modal-footer {
   padding: 20px 30px;
   border-top: 1px solid #eee;
