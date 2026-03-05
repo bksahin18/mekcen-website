@@ -741,7 +741,7 @@ export default function Home() {
             <div className="container">
               <div className="hero-content">
                 <h1 className="hero-title">
-                  1997'den Beri{" "}
+                1997&apos;den Beri{" "}
                   <span className="highlight">Güvenilir</span> Çözüm Ortağınız
                 </h1>
                 <p className="hero-subtitle">
@@ -778,7 +778,7 @@ export default function Home() {
                   </div>
                   <h3>25 Yıllık Tecrübe</h3>
                   <p>
-                    1997'den beri sektörde edindiğimiz deneyimle güvenilir
+                  1997&apos;den beri sektörde edindiğimiz deneyimle güvenilir
                     çözümler sunuyoruz.
                   </p>
                 </div>
@@ -940,7 +940,7 @@ export default function Home() {
                 <div className="mission-card">
                   <h4>Vizyonumuz</h4>
                   <p>
-                    Türkiye'nin lider asansör kontrol sistemleri üreticisi
+                  Türkiye&apos;nin lider asansör kontrol sistemleri üreticisi
                     olarak, uluslararası standartlarda ürünler geliştirmek ve
                     ihracat yapan bir firma haline gelmek.
                   </p>
@@ -1064,7 +1064,7 @@ export default function Home() {
                     }
                   >
                     <Phone size={18} />
-                    WhatsApp'tan Ulaşın
+                    WhatsApp&apos;tan Ulaşın
                   </button>
 
                   <button
@@ -1113,7 +1113,7 @@ export default function Home() {
                 <h4>MEKCEN</h4>
               </div>
               <p>
-                1997'den beri asansör kontrol sistemlerinde güvenilir çözüm
+              1997&apos;den beri asansör kontrol sistemlerinde güvenilir çözüm
                 ortağınız.
               </p>
             </div>
