@@ -915,7 +915,7 @@ export default function Home() {
                 <h3>Firmamız</h3>
                 <p>
                   <strong>MEKCEN Elektronik Asansör Kontrol Sistemleri</strong>,
-                  1997 yılından bu yana Ankara İvedik OSB'de faaliyet
+                  1997 yılından bu yana Ankara İvedik OSB&apos;de faaliyet
                   gösteren, asansör sektöründe öncü firmalardan biridir.
                   Kurucumuz <strong>Mehmet Kıvrak</strong> önderliğinde, 25 yılı
                   aşkın tecrübemizle sektöre yenilikçi ve güvenilir çözümler
