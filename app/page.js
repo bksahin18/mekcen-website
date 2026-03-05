@@ -438,6 +438,23 @@ export default function Home() {
         color: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
         hasDetails: true,
       },
+      // YENİ EKLENEN FOTOĞRAF GALERİSİ KARTI
+      {
+        id: "genel-fotograflar",
+        name: "Genel Fotoğraflar",
+        description: "Atölye, Üretim ve Referans Görsellerimiz",
+        detailedDescription:
+          "MEKCEN Elektronik olarak atölyemizden, üretim aşamalarından ve referanslarımızdan çeşitli kareler.",
+        features: [], // Özellikler listesi boş
+        technicalSpecs: null, // Teknik detaylar yok
+        images: Array.from({ length: 19 }, (_, i) => ({
+          src: `/genel-fotograflar/Genel Fotolar - ${i + 1}.jpeg`, // Eğer fotoğraflar png ise buradaki .jpg kısmını .png olarak değiştir
+          alt: `MEKCEN Genel Görsel ${i + 1}`,
+        })),
+        documents: [],
+        color: "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)", // Farklı bir arka plan rengi
+        hasDetails: true,
+      },
     ],
     [documentLists]
   );
@@ -516,7 +533,7 @@ export default function Home() {
             </button>
 
             <div className="modal-header">
-              <h2>{selectedProduct.name} - Detaylı Bilgi</h2>
+              <h2>{selectedProduct.name}</h2>
             </div>
 
             <div className="modal-content">
@@ -524,7 +541,7 @@ export default function Home() {
               {selectedProduct.images && (
                 <div className="product-section">
                   <h3>
-                    <ImageIcon size={18} /> Ürün Görselleri
+                    <ImageIcon size={18} /> Görseller
                   </h3>
                   <div className="image-gallery">
                     {selectedProduct.images.map((img, idx) => (
@@ -546,27 +563,29 @@ export default function Home() {
               {/* Açıklama */}
               <div className="product-section">
                 <h3>
-                  <Cpu size={18} /> Ürün Açıklaması
+                  <Cpu size={18} /> Açıklama
                 </h3>
                 <p>{selectedProduct.detailedDescription}</p>
               </div>
 
-              {/* Özellikler */}
-              <div className="product-section">
-                <h3>
-                  <Award size={18} /> Özellikler
-                </h3>
-                <ul className="feature-list-modal">
-                  {selectedProduct.features.map((feature, idx) => (
-                    <li key={idx}>
-                      <CheckCircle size={14} />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              {/* Özellikler - Sadece özellikleri varsa göster */}
+              {selectedProduct.features && selectedProduct.features.length > 0 && (
+                <div className="product-section">
+                  <h3>
+                    <Award size={18} /> Özellikler
+                  </h3>
+                  <ul className="feature-list-modal">
+                    {selectedProduct.features.map((feature, idx) => (
+                      <li key={idx}>
+                        <CheckCircle size={14} />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
 
-              {/* Teknik Özellikler */}
+              {/* Teknik Özellikler - Sadece varsa göster */}
               {selectedProduct.technicalSpecs && (
                 <div className="product-section">
                   <h3>
@@ -622,35 +641,19 @@ export default function Home() {
                   </div>
                 )}
 
-              {/* Dokümantasyon yoksa bilgilendirme */}
-              {selectedProduct.documents &&
-                selectedProduct.documents.length === 0 && (
-                  <div className="product-section">
-                    <h3>
-                      <BookOpen size={18} /> Dokümantasyon
-                    </h3>
-                    <div className="no-documents-info">
-                      <p>
-                        Bu ürün için şu anda dokümantasyon bulunmamaktadır.
-                        Detaylı bilgi için lütfen bizimle iletişime geçin.
-                      </p>
-                    </div>
-                  </div>
-                )}
-
               {/* İletişim Butonu */}
               <div className="modal-footer">
                 <button
                   className="btn btn-primary btn-full"
                   onClick={() => {
                     window.open(
-                      `https://wa.me/905323729511?text=Merhaba,%20${selectedProduct.name}%20ürününüz%20hakkında%20bilgi%20almak%20istiyorum`,
+                      `https://wa.me/905323729511?text=Merhaba,%20${selectedProduct.name}%20hakkında%20bilgi%20almak%20istiyorum`,
                       "_blank"
                     );
                   }}
                 >
                   <Phone size={18} />
-                  <span>Ürün Hakkında Bilgi Al</span>
+                  <span>Bilgi Al</span>
                 </button>
               </div>
             </div>
@@ -738,7 +741,7 @@ export default function Home() {
             <div className="container">
               <div className="hero-content">
                 <h1 className="hero-title">
-                  1997&apos;den Beri{" "}
+                  1997'den Beri{" "}
                   <span className="highlight">Güvenilir</span> Çözüm Ortağınız
                 </h1>
                 <p className="hero-subtitle">
@@ -775,7 +778,7 @@ export default function Home() {
                   </div>
                   <h3>25 Yıllık Tecrübe</h3>
                   <p>
-                    1997&apos;den beri sektörde edindiğimiz deneyimle güvenilir
+                    1997'den beri sektörde edindiğimiz deneyimle güvenilir
                     çözümler sunuyoruz.
                   </p>
                 </div>
@@ -847,35 +850,45 @@ export default function Home() {
                   >
                     <div className="product-logo">
                       <div className="product-logo-circle">
+                        {/* Harf ve kısaltmaları buraya ayarladık */}
                         {product.id === "mc-052"
                           ? "052"
                           : product.id === "mc-054"
                           ? "054"
-                          : "KRC"}
+                          : product.id === "krc"
+                          ? "KRC"
+                          : "GF"}
                       </div>
                       <h3>{product.name}</h3>
                     </div>
                   </div>
                   <div className="product-content">
                     <p className="product-desc">{product.description}</p>
-                    <ul className="product-features">
-                      {product.features.slice(0, 3).map((feature, idx) => (
-                        <li key={idx}>
-                          <CheckCircle size={14} />
-                          {feature}
-                        </li>
-                      ))}
-                      {product.features.length > 3 && (
-                        <li className="more-features">
-                          +{product.features.length - 3} özellik daha...
-                        </li>
-                      )}
-                    </ul>
-                    <button className="btn btn-outline btn-full">
+                    {/* Özellik listesi varsa göster */}
+                    {product.features && product.features.length > 0 && (
+                      <ul className="product-features">
+                        {product.features.slice(0, 3).map((feature, idx) => (
+                          <li key={idx}>
+                            <CheckCircle size={14} />
+                            {feature}
+                          </li>
+                        ))}
+                        {product.features.length > 3 && (
+                          <li className="more-features">
+                            +{product.features.length - 3} özellik daha...
+                          </li>
+                        )}
+                      </ul>
+                    )}
+                    <button className="btn btn-outline btn-full" style={product.features.length === 0 ? {marginTop: '20px'} : {}}>
                       {product.hasDetails ? (
                         <>
                           <Eye size={16} />
-                          <span>Detaylı Bilgi & Teknik Özellikler</span>
+                          <span>
+                            {product.id === "genel-fotograflar"
+                              ? "Fotoğrafları Görüntüle"
+                              : "Detaylı Bilgi & Teknik Özellikler"}
+                          </span>
                         </>
                       ) : (
                         "Detaylı Bilgi"
@@ -902,7 +915,7 @@ export default function Home() {
                 <h3>Firmamız</h3>
                 <p>
                   <strong>MEKCEN Elektronik Asansör Kontrol Sistemleri</strong>,
-                  1997 yılından bu yana Ankara İvedik OSB&apos;de faaliyet
+                  1997 yılından bu yana Ankara İvedik OSB'de faaliyet
                   gösteren, asansör sektöründe öncü firmalardan biridir.
                   Kurucumuz <strong>Mehmet Kıvrak</strong> önderliğinde, 25 yılı
                   aşkın tecrübemizle sektöre yenilikçi ve güvenilir çözümler
@@ -927,7 +940,7 @@ export default function Home() {
                 <div className="mission-card">
                   <h4>Vizyonumuz</h4>
                   <p>
-                    Türkiye&apos;nin lider asansör kontrol sistemleri üreticisi
+                    Türkiye'nin lider asansör kontrol sistemleri üreticisi
                     olarak, uluslararası standartlarda ürünler geliştirmek ve
                     ihracat yapan bir firma haline gelmek.
                   </p>
@@ -1051,7 +1064,7 @@ export default function Home() {
                     }
                   >
                     <Phone size={18} />
-                    WhatsApp&apos;tan Ulaşın
+                    WhatsApp'tan Ulaşın
                   </button>
 
                   <button
@@ -1100,7 +1113,7 @@ export default function Home() {
                 <h4>MEKCEN</h4>
               </div>
               <p>
-                1997&apos;den beri asansör kontrol sistemlerinde güvenilir çözüm
+                1997'den beri asansör kontrol sistemlerinde güvenilir çözüm
                 ortağınız.
               </p>
             </div>
