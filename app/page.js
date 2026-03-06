@@ -441,13 +441,13 @@ export default function Home() {
       // YENİ EKLENEN FOTOĞRAF GALERİSİ KARTI
       {
         id: "genel-fotograflar",
-        name: "Genel Fotoğraflar",
+        name: "DRİVER (SÜRÜCÜ) VE KART TAMİRLERİ ONARIMI",
         description: "Atölye, Üretim ve Referans Görsellerimiz",
         detailedDescription:
           "MEKCEN Elektronik olarak atölyemizden, üretim aşamalarından ve referanslarımızdan çeşitli kareler.",
         features: [], // Özellikler listesi boş
         technicalSpecs: null, // Teknik detaylar yok
-        images: Array.from({ length: 19 }, (_, i) => ({
+        images: Array.from({ length: 20 }, (_, i) => ({
           src: `/genel-fotograflar/Genel Fotolar - ${i + 1}.jpeg`, // Eğer fotoğraflar png ise buradaki .jpg kısmını .png olarak değiştir
           alt: `MEKCEN Genel Görsel ${i + 1}`,
         })),
